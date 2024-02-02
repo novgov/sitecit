@@ -134,28 +134,28 @@ def APKBG():
 def success():
     return render_template("success.html")
 
-@app.route ("/create", methods =['POST', 'GET'])
-def create():
-    if request.method == 'POST':
-        title = request.form['title']
-        intro = request.form['intro']
-        text = request.form['text']
-        pic = request.files['pic']
-        name = secure_filename(pic.filename)
-        mimetype = pic.mimetype
-        now = datetime.datetime.utcnow()
-        timepost = now.strftime("%d.%m.%Y")
+# @app.route ("/create", methods =['POST', 'GET'])
+# def create():
+#     if request.method == 'POST':
+#         title = request.form['title']
+#         intro = request.form['intro']
+#         text = request.form['text']
+#         pic = request.files['pic']
+#         name = secure_filename(pic.filename)
+#         mimetype = pic.mimetype
+#         now = datetime.datetime.utcnow()
+#         timepost = now.strftime("%d.%m.%Y")
 
-        post = Site(title=title, text=text,intro=intro,img=pic.read(), name=name,mimetype=mimetype,timepost=timepost)
+#         post = Site(title=title, text=text,intro=intro,img=pic.read(), name=name,mimetype=mimetype,timepost=timepost)
 
-        try:
-            db.session.add(post)
-            db.session.commit()
-            return redirect("/success")
-        except:
-            return 'При добавлении поста произошла ошибка'
-    else:
-        return render_template("create.html")
+#         try:
+#             db.session.add(post)
+#             db.session.commit()
+#             return redirect("/success")
+#         except:
+#             return 'При добавлении поста произошла ошибка'
+#     else:
+#         return render_template("create.html")
 
 
 @app.route ("/<int:id>")
@@ -176,10 +176,21 @@ def project():
     return render_template("project.html")
 
 
+@app.route("/digital_zabota")
+def digital_zabota():
+    return render_template("digital_zabota.html")
+
+
+@app.route("/digital_tech")
+def digital_tech():
+    return render_template("digital_tech.html")
+
+
+
 
 # @app.route("/bisnes")
 # def bisnes():
 #     return render_template("bisnes.html")
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=4567, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
