@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block title %}
+НПА
+{% endblock %}
+
+{% block content %}
+<div class="headwords"><h1>Нормативно-правовые акты ГОКУ ЦИТ</h1></div>
+
+<div id="content" class="site-content site-content-inner" tag="inner">
+	<div id="content-inside" class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="left-menu">
+					<h3 class="left-menu-caption">
+						<i class="icon"></i>
+						Документы	</h3>
+					<div class="menu-container">
+						<ul id="menu" class="menu">
+							<li id="menu-item-289" class="menu-item"><a href="{{ url_for('ustav')}}" aria-current="page">Устав</a></li>
+
+</ul></div>
+				</div>
+					</div>
+
+				<div class="col-lg-9">
+					<div class="contentPage">
+						<h2 class="contentPage-caption">
+							Устав						</h2>
+						<div class="breadcrumb"><a href="/">Главная</a> » Устав</div>						<main id="main" class="site-main" role="main">
+
+<article id="post-264" class="post-264 page type-page status-publish hentry category-max_mega_menu_5">
+	<div class="entry-content">
+
+
+	<table class="table table-download">
+	<tbody>
+	<tr>
+	<td >Устав ГОКУ "Центр информационных технологий" </td>
+	<td> <a class="btn btn-white btn-animate"  href="{{ url_for('static', filename= 'files/Ustav_GOKU.pdf') }}" download>Скачать</a>
+	</td>
+	</tr>
+	</tbody>
+	</table>
+
+						</main>
+					</div>
+				</div>
+			</div>
+		</div>
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Новости
+{% endblock %}
+
+{% block content %}
+<h1> Новости за все время </h1>
+    {% for el in posts%}
+
+<div class="medianews" href="/posts/{{el.id}}" style=" margin-top: 15px; margin-left: 5px;"> <div class="imag"> <a href="/posts/{{el.id}}"></a></div>
+    <div class="textmedianews">
+    <a href="/posts/{{el.id}}">{{el.intro}}</a> <br>
+        <br><span>{{el.timepost}}</span> </div>
+</div>
+    {%endfor%}
+
+{%endblock%}
+
+
+

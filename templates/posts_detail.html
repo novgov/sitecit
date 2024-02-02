@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}
+{{posts.title}}
+{% endblock %}
+
+<div class="page">{% block content %}
+    <h1>{{posts.title}}</h1>
+    <img src= /{{posts.id}} style="height: 60vh; margin-bottom: 10px">
+    <div class = "textpostdetail">
+        <p>{{posts.text}}</p>
+        <b>Дата: {{posts.timepost}} </b>
+    </div>
+
+
+
+
+{% endblock %}</div>

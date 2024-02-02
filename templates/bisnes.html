@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Форма
+{% endblock %}
+
+{% block content %}
+<h3> Сведения о камерах видеонаблюдения, установленных в рамках АПК "БГ"</h3><br>
+<div id="container">
+  <div class="form-group">
+<form style="margin-bottom: 15px;">
+  <div class="form" style="border-width: 5px; border-color: #4C75A3; width: 65vw; height: 350px; border-style: solid; padding: 10px;">
+    Мунициапальное образование:
+    <select class="form-control" id="exampleFormControlSelect1" style="padding-top: -10px" >
+      <option>Великий Новгород</option>
+      <option>Новгородский район</option>
+      <option>Старорусский район</option>
+      <option>Боровический район</option>
+      <option>Маловишерский район</option>
+    </select><br>
+
+    <input placeholder="Адрес" class="form-control" id="exampleFormControlTextarea1" rows="3" style="height: 30px;"></input><br>
+
+    Количество камер: &nbsp;
+  <input type="number" step="1" min="1" max="100" value="1" style="width: 40px;"></input><br>
+  <div class="row">
+  <div class="col">
+      Тип подключения: &nbsp;
+      <select class="form-control" id="exampleFormControlSelect1" style="padding-top: -10px" >
+        <option>Проводное</option>
+        <option>4G</option>
+      </select>
+  </div>
+  <div class="col">
+    Тип канала: &nbsp;
+    <select class="form-control" id="exampleFormControlSelect1" style="padding-top: -10px" >
+      <option>IP</option>
+      <option>Аналоговый</option>
+    </select>
+  </div>
+  <div class="col">
+    Наличие сервера/видеорегистратора : <br>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5" checked>
+  <label class="form-check-label" for="exampleRadios5">
+    Да
+  </label>
+  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="option6">
+  <label class="form-check-label" for="exampleRadios6">
+    Нет
+  </label></div>
+  <div>
+    <label for="exampleFormControlTextarea1"></label>
+    <input placeholder="Модель видеокамеры" class="form-control" id="exampleFormControlTextarea1" rows="3" style="height: 30px;"></input><br>
+  </div>
+  </div>
+</form>
+  </div>
+</div>
+</div><br>
+
+
+<script>
+function addRow() {
+var container = document.getElementById("container");
+var newRow = document.createElement("div");
+newRow.className = "form-group";
+newRow.innerHTML = '<form style="margin-bottom: 15px;"><div class="form" style="border-width: 5px; border-color: #4C75A3; width: 65vw; height: 350px; border-style: solid; padding: 10px;">Мунициапальное образование:<select class="form-control" id="exampleFormControlSelect1" style="padding-top: -10px" ><option>Великий Новгород</option><option>Новгородский район</option><option>Старорусский район</option><option>Боровический район</option><option>Маловишерский район</option></select><br><input placeholder="Адрес" class="form-control" id="exampleFormControlTextarea1" rows="3" style="height: 30px;"></input><br>Количество камер: &nbsp;<input type="number" step="1" min="1" max="100" value="1" style="width: 40px;"></input><br><div class="row"><div class="col">Тип подключения: &nbsp;<select class="form-control" id="exampleFormControlSelect1" style="padding-top: -10px" ><option>Проводное</option><option>4G</option></select></div><div class="col">Тип канала: &nbsp;<select class="form-control" id="exampleFormControlSelect1" style="padding-top: -10px" ><option>IP</option><option>Аналоговый</option></select></div><div class="col">Наличие сервера/видеорегистратора : <br><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5" value="option5" checked><label class="form-check-label" for="exampleRadios5">Да</label><input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios6" value="option6"><label class="form-check-label" for="exampleRadios6">Нет</label></div><div><label for="exampleFormControlTextarea1"></label><input placeholder="Модель видеокамеры" class="form-control" id="exampleFormControlTextarea1" rows="3" style="height: 30px;"></input><br></div></div></form><br>';
+container.appendChild(newRow);
+}
+
+</script>
+
+<div id="botton">
+<input type="button" class="btn btn-white btn-animate" value="Добавить" onclick="addRow()">
+<input type="submit" class="btn btn-white btn-animate" value="Отправить"><br>
+</div>
+
+
+{%endblock%}

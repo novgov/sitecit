@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Вакансии ГОКУ "ЦИТ"
+{% endblock %}
+
+{% block content %}
+
+<div class="item-2">
+		<div class="img-wrap">
+			<img src="{{url_for('static', filename= 'image/worker.png')}}" alt="">
+		</div>
+		<div class="desc-wrap">
+			<div class="title">Специалист отдела проектов</div>
+			<div class="desc">ГОКУ "ЦИТ"</div>
+							<div class="salary">35 000 - 38 000 руб.</div>
+					</div>
+		<a href="/vakancy/1" class="more-btn" style="color: #182968;">Подробнее</a>
+	</div>
+
+<div class="item-3">
+		<div class="img-wrap">
+			<img src="{{url_for('static', filename= 'image/worker.png')}}" alt="">
+		</div>
+		<div class="desc-wrap">
+			<div class="title">Старший специалист отдела закупок</div>
+			<div class="desc">ГОКУ "ЦИТ"</div>
+							<div class="salary">45 000 - 48 000 руб.</div>
+					</div>
+		<a href="/vakancy/1" class="more-btn" style="color: #182968;">Подробнее</a>
+	</div>
+{%endblock%}

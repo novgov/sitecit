@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'css/main.css') }}">
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body style = "font-family: Golos; font-size: 18px" >
+    <div class="container">
+    <div class="page" style=" width: 110%">
+
+
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <img class = "header__img" src="{{ url_for('static', filename= 'image/logo.png') }}" alt="logo">
+        <span style="font-size: 20px; font-family: Golos;">ГОКУ "Центр информационных технологий"</span>
+      </a>
+        <style>
+.dropbtn {
+  background-color: #f83a081a;
+  color: #050000;
+  width: 250px;
+    height: 35px;
+  border: none;
+    font-family: Golos
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fcecec;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    font-family: Golos
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #fdcbca
+}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {background-color: rgba(248, 58, 8, 0.1);}
+</style>
+</head>
+<body>
+
+<div class="dropdown" >
+  <button class="dropbtn" style="font-size: 20px"> ≡ Полезные ссылки </button>
+  <div class="dropdown-content">
+    <a href="https://edportal.novreg.ru/" target="_blank">Единый портал Правительства Новгородской области</a>
+    <a href="https://mindigital.novreg.ru/" target="_blank">Минцифра НО</a>
+    <a href="https://niac.ru/" target="_blank">ГУ НИАЦ</a>
+  </div>
+</div>
+
+
+
+      <ul class="nav nav-pills" style="margin-right: 40px">
+          <l1 class="menuhead"style=" font-family: Golos; margin-left: 10px; display: none;"><a href="{{ url_for('about') }}" class="btn btn-white btn-animate">О нас</a></l1>
+      </ul>
+
+    </header>
+    <div class="header__menu header-menu wrapper" style="width: 95%">
+          <div class="header-menu__container">
+ <div class="header-menu__main">
+    <nav class="header-menu__main-nav" >
+		<a class="header-menu__main-link" style=" font-size: 16px" href="{{ url_for('about') }}" data-dropdown="o11">О нас</a>
+		<a class="header-menu__main-link" style=" font-size: 16px" href="/ustav" data-dropdown="o18">Документы</a>
+		<a class="header-menu__main-link" style=" font-size: 16px" href="/KJNO" data-dropdown="o19">Проекты</a>
+		<a class="header-menu__main-link" style=" font-size: 16px" href="/contacts" data-dropdown="o26">Контакты</a>
+    <a class="header-menu__main-link" style=" font-size: 16px" href="/medianews" data-dropdown="o24">Новости</a>
+
+    </nav>
+            </div>
+          </div>
+        </div>
+        <main class="content">
+            {% block content %}{% endblock %} </main> <br>
+
+  </footer>
+    </div>
+        </div>
+    <footer class="footerwr" style="background-color: #f4f7fb;margin-top: 50px">
+        <div class="footer__wrapper wrapper">
+	<div class="footer__container">
+		<div class="footer__block" style="margin-left: 20px">
+            <div class="footer__logo-label">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+            <img class = "header__img" src="{{ url_for('static', filename= 'image/logo.png') }}" style="width: 170px; height: 170px" alt="logo"></a>
+			</div>
+			<div class="footer__logo-label" >
+<h3 style="font-family: Golos; font-size: 22px"><span style="color: #000000;">Государственное областное&nbsp;</span><br>
+<span style="color: #000000;">казённое учреждение&nbsp;</span><br>
+<span style="color: #000000;">"Центр информационных технологий"&nbsp;</span></h3>
+		</div>
+			</div>
+
+		<div class="footer__block">
+			 			<nav class="footer-nav">
+                <div class="footer-nav__head">Основное</div>
+				<div class="footer-nav__links">
+                    <a style="font-size: 18px" href="/ustav" >Документы</a>
+                    <a style="font-size: 18px" href="/project" >Проекты</a>
+                    <a style="font-size: 18px" href="/contacts">Контакты</a>
+                    <a style="font-size: 18px" href="/medianews">Новости</a>
+                    <a style="font-size: 18px" href="/about">О нас</a>
+				</div>
+			</nav>
+
+			</div>
+		<div class="footer__block" >
+            <a style="font-size: 16px" href="tel:+78162700515" class="footer__contacts-item">
+                  <img style="width: 24px; height: 24px" src="{{ url_for('static', filename= 'image/tel.png') }}">
+                    +7 (8162) 700-515
+                  <span>Телефон учреждения</span>
+                </a> <br>
+                <a style="font-size: 16px" href="mailto:cit@novreg.ru" class="footer__contacts-item footer__contacts-item--mail">
+                  <img style="width: 24px; height: 24px" src="{{ url_for('static', filename= 'image/mail.png') }}">
+                   cit@novreg.ru
+
+                </a><br>
+            <span style="font-size: 16px" class="footer__contacts-item footer__contacts-item--address">
+                 <img style="width: 24px; height: 24px" src="{{ url_for('static', filename= 'image/place.jpg') }}">
+                Адрес: Россия, 173005, Великий Новгород, ул. Черняховского, д.74                </span>
+
+
+		</div>
+	</div>
+	<div class="footer__bottom">
+
+		<div class="footer__label" style="margin-left: 5px;">
+			Официальный сайт ГОКУ "ЦИТ"<br>
+			Новгородская область © 2024
+		</div>
+		<div class="footer__cookies">
+			 Продолжая использовать наш сайт, вы даете согласие на обработку файлов Cookies и других пользовательских данных, в соответствии с <a href="https://edportal.novreg.ru/politika_konfidentsialnosti" target="_blank"> Политикой конфиденциальности</a>
+       
+		</div><br>
+  
+        <ul class="nav nav-pills" style="margin-right: 20px">
+            <l1 class="menuhead"style=" font-family: Golos; margin-left: 10px"><a href="https://vk.com/gokucit" class="btn btn-white btn-animate" style="font-size: 14px; width: 80px;height: 33px;">ВК</a></l1>
+            <l1 class="menuhead"style=" font-family: Golos; margin-left: 10px"><a href="https://vk.com/gokucit" class="btn btn-white btn-animate" style="font-size: 14px; width: 80px;height: 33px;">Телеграм </a></l1>
+      </ul>
+      
+	</div>
+  <div class="footer__cookies" style="margin-left: 5px;">
+    Разработчик сайта - <a href="https://vk.com/cccbljlka" target="_blank"> Владимир Сидоренко </a>
+    </div>
+   
+  </div>
+        </div>
+      </div>
+    </div>
+</div>
+        </div>
+</body>
+</html>
+

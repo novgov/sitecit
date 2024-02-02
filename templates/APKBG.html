@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block title %}
+НПА
+{% endblock %}
+
+{% block content %}
+<div class="headwords"><h1>Нормативно-правовые акты ГОКУ ЦИТ</h1></div>
+
+<div id="content" class="site-content site-content-inner" tag="inner">
+	<div id="content-inside" class="container">
+		<div class="row">
+			<div class="col-lg-3">
+				<div class="left-menu ">
+					<h3 class="left-menu-caption">
+						<i class="icon"></i>
+						Документы	</h3>
+					<div class="menu-%d0%b4%d0%be%d0%ba%d1%83%d0%bc%d0%b5%d0%bd%d1%82%d1%8b-container">
+<li id="menu-item-570" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-570"><a href="{{url_for('KJNO')}}">Карта жителя Новгородской области</a></li>
+<li id="menu-item-876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-876"><a href="{{url_for('APKBG')}}">АПК "Безопасный город"</a></li>
+</ul></div><li id="menu-item-876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-876"><a href="{{url_for('APKBG')}}">Цифровая забота</a></li>
+<li id="menu-item-876" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-876"><a href="{{url_for('APKBG')}}">Цифровые технологии</a></li>
+				</div>
+					</div>
+
+				<div class="col-lg-9">
+					<div class="contentPage">
+						<h2 class="contentPage-caption">
+							Проект "Безопасный город"						</h2>
+						<div class="breadcrumb"><a href="/">Главная</a> » Проект "Безопасный город"</div>						<main id="main" class="site-main" role="main">
+
+<article id="post-264" class="post-264 page type-page status-publish hentry category-max_mega_menu_5">
+	<div class="entry-content">
+
+
+<table class="table table-download">
+<tbody>
+<tr >
+<td>Концепция развития АПК "Безопасный город"</td>
+<td ><a class="btn btn-white btn-animate"  href="{{ url_for('static', filename= 'files/koncepcionBG.pdf') }}" download>Скачать</a>
+
+</td>
+</tr>
+</tbody>
+</table>
+
+						</main>
+					</div>
+				</div>
+			</div>
+		</div>
+
+{% endblock %}

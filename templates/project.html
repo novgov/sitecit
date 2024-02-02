@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Проекты
+{% endblock %}
+
+{% block content %}
+<h1 style="font-family: Golos"> Проектная деятельность </h1>
+
+    <table class="table table-download">
+        <tbody>
+        <a href="{{url_for('static', filename= 'files/Pasport-KС.pdf')}}" target="_blank"> Паспорт Карта жителя Новгородской области</a> <br>
+        <a href="{{url_for('static', filename= 'files/Pasport-KС.pdf')}}" target="_blank"> Рабочий план Карта жителя Новгородской области</a> <br>
+        <a href="{{ url_for('static', filename= 'files/koncepcionBG.pdf') }}" target="_blank"> Концепция построения и развития АПК "Безопасный город" до 2025 г.</a><br>
+        <a href="{{ url_for('static', filename= 'files/koncepcionBG.pdf') }}" target="_blank"> Паспорт АПК "Безопасный город" </a><br>
+        <a href="{{ url_for('static', filename= 'files/koncepcionBG.pdf') }}" target="_blank"> Рабочий план АПК "Безопасный город" </a><br>
+        <a href="{{ url_for('static', filename= 'files/koncepcionBG.pdf') }}" target="_blank"> Паспорт Цифровая забота </a><br>
+        <a href="{{ url_for('static', filename= 'files/koncepcionBG.pdf') }}" target="_blank"> Рабочий Цифровая забота </a><br>
+        </tbody>
+    </table>
+
+
+{% endblock %}

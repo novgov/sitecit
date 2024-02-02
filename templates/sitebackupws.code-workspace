@@ -1,0 +1,35 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {}
+	"deploy": {
+        "packages": [
+            {
+                "name": "Name_of_your_app",
+                "description": "Description of your app",
+                "filse": [
+                    "**/*.py",
+                    "/*.json"
+                ],
+                "deployOnSave": true
+            }
+        ],
+        "targets": [
+            {
+                "type": "sftp",
+                "name": "My SFTP",
+                "description":"description of interface",
+                "dir": "domains/j12345678.myjino.ru",
+                "host": "j12345678.myjino.ru", "port": 2222,
+                "user": "j12345678_deploy", "password": "password",
+
+                "checkBeforeDeploy": true,
+
+            }
+        ]
+    }
+}
+}
