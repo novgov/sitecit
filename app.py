@@ -2,6 +2,7 @@ from flask import Flask,render_template, request, redirect,Response
 from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 import datetime
+import pathlib
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -185,6 +186,10 @@ def digital_zabota():
 def digital_tech():
     return render_template("digital_tech.html")
 
+
+@app.route ("/logo.ico")
+def get_img_logo():
+     return render_template ("logo.html")
 
 
 
