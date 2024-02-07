@@ -187,9 +187,9 @@ def digital_tech():
     return render_template("digital_tech.html")
 
 
-@app.route ("/logo.ico")
-def get_img_logo():
-     return render_template ("logo.html")
+# @app.route ("/logo.ico")
+# def get_img_logo():
+#      return render_template ("logo.html")
 
 
 
