@@ -211,7 +211,9 @@ h1{
         border-bottom-left-radius: 10px;
         margin-top: 30px;
         padding-bottom: 10px;
-
+    }
+    .textfornews span {
+      font-size: 20px;
     }
     .texting:hover{
         transform: translateY(-1px);
@@ -260,8 +262,11 @@ h1{
 
 @media screen and (max-width: 2400px) {
   .grid-item{
-      width: 40svw;
+      width: 45svw;
       height: 40svh;
+  }
+  .textfornews span {
+    font-size: 20px;
   }
   #sidebar{
       margin-top: -950px;
@@ -270,7 +275,7 @@ h1{
       width: 220px;
   }
   .texting {
-      width: 40svw;
+      width: 45svw;
       box-shadow: 0 5px 10px 0 rgba(0,0,0,.1),0 3px 15px 0 rgba(0,0,0,.19)!important;
       border: 1px solid transparent;
       background-color: #f4f7fb;
@@ -310,7 +315,7 @@ h1{
   }
 
   .textfornews{
-      width: 40svw;
+      width: 45svw;
       height: 40svh;
   }
   .corup{
@@ -320,7 +325,7 @@ h1{
   }
   .image{
       height: 100%;
-      width: 40svw;
+      width: 45svw;
   }
   .header{
       height: 120px;
@@ -331,25 +336,28 @@ h1{
    .page {
       width: 95%;
    }
+   .textfornews span {
+    font-size: 20px;
+  }
 
    .contentindex {
       width: 70%;
       padding: 3% 4%;
    }
     .grid-item{
-        width: 60svw;
+        width: 50svw;
    }
     .textfornews{
-        width: 60svw;
+        width: 50svw;
         height: 40svh;
     }
     .texting {
-        width: 60svw;
+        width: 50svw;
     }
 
     .image{
         height: 100%;
-        width: 60svw;
+        width: 50svw;
     }
     .corup {
         margin-bottom: 10px;
@@ -363,7 +371,7 @@ h1{
         width: 90%;
     }
     .content{
-        width: 95%;
+        width: 100%;
     }
     .header{
         height: 100px;
@@ -378,6 +386,9 @@ h1{
    .page {
       width: 95%;
    }
+   .textfornews span {
+    font-size: 20px;
+  }
    .contentindex {
       width: 95%;
       padding: 3% 4%;
@@ -416,6 +427,9 @@ h1{
       float: none;
       margin: 20px 0;
    }
+   .textfornews span {
+    font-size: 20px;
+  }
     .gird {
         width: 100%;
     }
@@ -451,6 +465,65 @@ h1{
        width: 80svw;
        height: 80px;
    }
+}
+
+@media screen and (max-width: 490px) {
+
+  .header__img {
+      padding-left: -150px;
+  }
+   .contentindex{
+     width: 100%;
+     float: none;
+     margin: 20px 0;
+  }
+   .gird {
+       width: 100%;
+   }
+   .grid-item{
+       width: 90svw;
+   }
+   .image{
+       width: 90svw;
+   }
+   .dropdown{
+       margin-bottom: 20px;
+   }
+   .textfornews{
+       width: 90svw;
+
+   }
+  .corup {
+      float: left;
+      margin: 0;
+      margin-right: 50px ;
+  }
+   .header{
+       height: 70px;
+   }
+   .texting {
+       width: 80svw;
+   }
+  .corup{
+      width: 80svw;
+      height: 80px;
+  }
+  .corup img{
+      width: 80svw;
+      height: 80px;
+  }
+  .textfornews span {
+    font-size: 16px;
+  }
+  tbody {
+    width: 90svw;
+  }
+}
+
+@media screen and (max-width: 290px) {
+  .textfornews span {
+    font-size: 14px;
+  }
 }
 
 
@@ -799,11 +872,6 @@ item-2 .desc-wrap .desc {
     padding-left: 20px;
     padding-top: 30vh;
 }
-.textfornews span {
-    font-size: 15px;
-    font: Helvetica;
-
-}
 
 .textpostdetail p {
     font-size: 22px;
@@ -910,6 +978,11 @@ item-2 .desc-wrap .desc {
   }
 }
 
+@media (max-width: 390px) {
+  .header-menu__container{
+      width:100%;
+  }
+}
 
 @media (max-width: 450px) {
     .header-menu__main-link:nth-child(1) {

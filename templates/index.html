@@ -13,7 +13,7 @@
 		<div class="gird">
 		<article class="grid-item" >
 			{% for el in fposts %}
-			<div class = "textfornews" ><span style="font-size: 20px">{{el.intro}}</span><br>Дата: {{el.timepost}} </div>
+			<div class = "textfornews" ><span>{{el.intro}}</span><br><span>Дата: {{el.timepost}} </span> </div>
 			<div class="image"><a href="/posts/{{el.id}}"><img src="/{{el.id}}"></div>
 			{%endfor%}
 		</article>
