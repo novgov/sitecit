@@ -545,7 +545,7 @@ h1{
       height: 80px;
   }
   .textfornews span {
-    font-size: 16px;
+    font-size: 14px;
   }
   tbody {
     width: 90svw;
@@ -1550,7 +1550,7 @@ item-2 .desc-wrap .desc {
   fill: #0050B2;
   transition: 0.2s;
 }
-.footer__socials a:hover, , .header__socials a:hover {
+.footer__socials a:hover, .header__socials a:hover {
   fill: #0061D9;
 }
 @media (max-width: 767px) {
