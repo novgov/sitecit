@@ -5,47 +5,69 @@
 {% endblock %}
 
 {% block content %}
-<div id="content" class="site-content site-content-inner" tag="inner">
-		<div id="content-inside" class="container">
-			<div class="row">
+<div class="page-content">
+  <h1 class="page__title">Информация об организации</h1>
+<div class="info-title">
+    Государственное областное казенное учреждение «Центр информационных технологий»
+</div>
+<div class="info-cardblock">
+<div class="info-card">
+  <div class="info-card__photo" style="background-size:cover;"><img style="border-radius: 5px;" src="{{ url_for('static', filename= 'image/director.jpg') }}" width="200" height="200">
+  </div>
+  <div class="info-card__text">
+      <div class="info-card__fio1">
+          Балакин			</div>
+      <div class="info-card__fio2">
+          Евгений Валерьевич			</div>
+      <div class="info-card__dolzhnost">
+          Директор ГОКУ "Центр информационных технологии"			</div>
+  </div>
+</div>
+<div class="info-contacts">
+  <div class="info-contacts__title">
+      Контакты
+  </div>
+  <div class="info-contacts__phone">
+    <img style="width: 18px; height: 18px" src="{{ url_for('static', filename= 'image/tel.png') }}">
+      8(8162) 700-515 (Доб. 3900)		</div>
+  <div class="info-contacts__email">
+    <a style="font-size: 16px" href="mailto:cit@novreg.ru">
+        <img style="width: 18px; height: 18px" src="{{ url_for('static', filename= 'image/mail.png') }}">
+        evgeniy.balakin@novreg.ru </a>
+  </div>
 
-				<div class="col-lg-12">
-					<div class="contentPage">
-						<h1 class="contentPage-caption">
-							Об организации						</h1>
-						<div class="breadcrumb"><a href="http://niac.ru">Главная</a> » Об организации</div>						<main id="main" class="site-main" role="main">
-
-<article id="post-2493" class="post-2493 page type-page status-publish hentry">
-	<div class="entry-content1">
-		<p><span style="color: #000000;"><i>Государственное областное казенное учреждение «Центр информационных технологий» основано 01 июня 2023 года.</i></span></p>
-<p><a href="{{url_for('static', filename= 'files/Raspcit.pdf')}}">Распоряжение Правительства Новгородской области от 29.03.2023 № 151-рг "О создании государственного областного казенного учреждения
-«Центр информационных технологий»</a></p>
-<p><span><b> Деятельность Учреждения: </b></span></p>
-		<p><span style="color: #000000">
-			-Приобретение, принятие, хранение автоматизированных
+  
+  
+</div>
+</div>
+<br><br>
+<div class="info-subtitle">
+<p><span>Деятельность Учреждения:</span></p>
+		<p><span>
+			- Приобретение, принятие, хранение автоматизированных
 			рабочих мест, базового программного обеспечения, серверного,
 			коммутационного оборудования и периферийных устройств, оборудования, мебели,канцелярских принадлежностей и иного имущества и материалов, необходимых для обеспечения деятельности Учредителя, в том числе
 			организация их ремонта и обслуживания;</span></p>
-			<p><span style="color: #000000">- сопровождение процессов цифрового развития и цифровой
+			<p><span>- Cопровождение процессов цифрового развития и цифровой
 			трансформации отраслей экономики, социальной сферыи государственного
 			управления Новгородской области;</span></p>
-			<p><span style="color: #000000">- Реализация и развитие на территории Новгородской области АПК «Безопасный город»;</span></p>
-			<p><span style="color: #000000">- Обеспечение внедрения и поддрежки функционирования на территории Новгородской области проекта Карта жителя;</span></p>
-			<p><span style="color: #000000">- Развитие и реализация на территории Новгородской области проекта "Цифровая Забота";</span></p>
-		
-<hr>
-<p><span style="color: #000000;"><b>Руководство</b></span></p>
-<p><span style="color: #000000;"><b><img class="" title="Фото Балакин.jpg" src="{{ url_for('static', filename= 'image/director.jpg') }}" alt="Фото Балакин.jpg" width="230" height="310" align="left"></b></span></p>
-<p><span  style="margin-left:30px">Балакин Евгений Валерьевич</span></p>
-<p><span style="margin-left:30px">Директор ГОКУ ЦИТ</span></p>
-	</div><!-- .entry-content -->
-
-	
-</article><!-- #post-## -->
-						</main>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-{% endblock %}
+			<p><span>- Реализация и развитие на территории Новгородской области АПК «Безопасный город»;</span></p>
+			<p><span>- Обеспечение внедрения и поддрежки функционирования на территории Новгородской области проекта Карта жителя;</span></p>
+			<p><span>- Развитие и реализация на территории Новгородской области проекта "Цифровая Забота".</span></p>
+</div>
+<div class="info-docs">
+<div class="info-subtitle">Документы</div>
+          <div class="info-doc">
+  <div class="info-doc__name">
+      Положение о создании учреждения</div>
+  <div class="info-doc__open">
+      <a href="{{url_for('static', filename= 'files/Raspcit.pdf')}}" target="_blank">Открыть</a>
+  </div>
+      <a class="btn btn-white btn-animate" href="{{url_for('static', filename= 'files/Raspcit.pdf')}}" download="">Скачать</a>
+  </div>
+</div>
+</div>
+</div>
+<br>
+<br></div></div>
+{%endblock%}

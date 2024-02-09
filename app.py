@@ -22,9 +22,7 @@ class Site(db.Model):
 
 # @app.route("/t")
 # def test():
-#     c = Site.query.order_by(Site.id.desc()).first()
-#     last = c.id
-#     return str(last)
+#     return render_template("test.html")
 
 @app.route("/")
 @app.route("/index")
