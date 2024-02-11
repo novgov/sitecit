@@ -5,17 +5,18 @@
 {% endblock %}
 
 {% block content %}
-<h1> Новости за все время </h1>
-    {% for el in posts%}
-
-<div class="medianews" href="/posts/{{el.id}}" style=" margin-top: 15px; margin-left: 5px;"> <div class="imag"> <a href="/posts/{{el.id}}"></a></div>
-    <div class="textmedianews">
-    <a href="/posts/{{el.id}}">{{el.intro}}</a> <br>
-        <br><span>{{el.timepost}}</span> </div>
-</div>
-    {%endfor%}
-
-{%endblock%}
+{% for el in posts%}
+<div class="press-news" style="margin-top: 15px">
+	<a class="press-news__item news-card" href="/posts/{{el.id}}">
+			<img class="news-card__image" src="/{{el.id}}" alt="{{el.intro}}" title="{{el.intro}}">
+            <div class="news-card__text-block">
+                <span class="news-card__date">{{el.timepost}}</span>
+                <div class="news-card__title">{{el.intro}}</div>
+                <div class="news-card__excerpt">{{el.text}}</div></div>
+        </a> 
+    </div>
+   
+    {%endfor%}{%endblock%}
 
 
 
