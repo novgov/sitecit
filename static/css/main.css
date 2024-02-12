@@ -5023,7 +5023,7 @@ label.main-grid-checkbox {
   
   .news-card__image {
 	flex-shrink: 0;
-	width: 250px;
+	width: 225px;
 	height: 200px;
 	border-radius: 10px;
 	overflow: hidden;
