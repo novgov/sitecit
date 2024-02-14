@@ -558,17 +558,19 @@ h1{
   }
   .textfornews{
 	width: 100svw;
-	height: 35svh;
+	
 	}
 	.image {
 		width: 100svw;
-		height: 35svh;
+		
 	}
 	.grid-item {
 		width: 100svw;
-		height: 35svh;
+		
 	}
-
+	.texting{
+		width: 96svw;
+	}
 }
 
 
