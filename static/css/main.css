@@ -265,16 +265,17 @@ h1{
     }
 }
 
+
 @media screen and (max-width: 2400px) {
   .grid-item{
       width: 35svw;
       height: 40svh;
   }
   .textfornews span {
-    font-size: 20px;
+    font-size: 18px;
   }
   #sidebar{
-      margin-top: -950px;
+      margin-top: -890px;
       z-index: 1;
       float: right;
       width: 220px;
@@ -371,10 +372,11 @@ h1{
    }
     .grid-item{
         width: 60svw;
+		height: 47svh;
    }
     .textfornews{
         width: 60svw;
-        height: 40svh;
+        height: 47svh;
     }
     .texting {
         width: 60svw;
@@ -432,11 +434,11 @@ h1{
     }
    .grid-item {
        width: 70svw;
-       height: 45svh;
+       height: 55svh;
    }
     .textfornews{
         width: 70svw;
-        height: 45svh;
+        height: 55svh;
     }
 
     .texting {
@@ -445,7 +447,7 @@ h1{
 
     .image {
       width: 70svw;
-      height: 45svh;
+      height: 55svh;
     }
 }
 

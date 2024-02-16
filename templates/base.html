@@ -80,20 +80,204 @@
       </ul>
 
     </header>
-    <div class="header__menu header-menu wrapper" style="width: 95%">
-          <div class="header-menu__container">
- <div class="header-menu__main">
-    <nav class="header-menu__main-nav" >
-		<a class="header-menu__main-link" style=" font-size: 16px" href="{{ url_for('about') }}" data-dropdown="o11">О нас</a>
-		<a class="header-menu__main-link" style=" font-size: 16px" href="/ustav" data-dropdown="o18">Документы</a>
-		<a class="header-menu__main-link" style=" font-size: 16px" href="/KJNO" data-dropdown="o19">Проекты</a>
-		<a class="header-menu__main-link" style=" font-size: 16px" href="/contacts" data-dropdown="o26">Контакты</a>
-    <a class="header-menu__main-link" style=" font-size: 16px" href="/medianews" data-dropdown="o24">Новости</a>
-
-    </nav>
-            </div>
+    <nav class="navbar">
+      <div class="navbar__wrap">
+        <div class="hamb">
+          <div class="hamb__field" id="hamb">
+            <div class="bar"></div> <div class="bar"></div>
+            <div class="bar"></div>
           </div>
         </div>
+        <ul class="menu" id="menu">
+          <li><a style="font-size: 18px" href="/ustav" >Документы</a></li>
+          <li><a style="font-size: 18px" href="/KJNO" >Проекты</a></li>
+          <li><a style="font-size: 18px" href="/contacts">Контакты</a></li>
+          <li><a style="font-size: 18px" href="/medianews">Новости</a></li>
+          <li><a style="font-size: 18px" href="/about">О нас</a></li>
+        </ul>
+      </div>
+    </div>
+      </nav>
+  <div class="popup" id="popup"></div>
+
+
+<style>
+
+  
+  .navbar {
+    width: 80%;
+    height: 70px;
+    background: #f4f7fb;
+    border-radius: 10px;
+  }
+
+  
+  .navbar__wrap {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+  }
+  
+  .hamb {
+    display: none;
+  }
+  
+  .popup {
+    display: none;
+  }
+  
+  .menu > li > a {
+    text-decoration: none;
+  }
+  
+  .navbar__wrap .menu {
+    display: flex;
+  }
+  
+  .navbar__wrap .menu > li {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .navbar__wrap .menu > li > a {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: #0252a8;
+  }
+  
+  .navbar__wrap .menu > li > a:hover {
+    border-bottom: 2px solid #0050B2;
+  }
+  @media (max-width: 1000px) {
+.navbar__wrap .menu {
+  display: none;
+}
+
+.hamb {
+  display: flex;
+  align-items: center;
+}
+
+.hamb__field {
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.bar {
+  display: block;
+  width: 30px;
+  height: 3px;
+  margin: 6px auto;
+  background-color: #0252a8;
+  transition: 0.2s;
+}
+
+.popup {
+  position: fixed;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #f4f7fb;
+  z-index: 100;
+  display: flex;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.popup.open {
+  left: 0;
+}
+
+.popup .menu {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding:  0;
+  overflow: auto;
+ 
+}
+
+.popup .menu > li {
+  width: 100%;
+}
+
+.popup .menu > li > a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #0252a8;
+}
+
+.popup .menu > li > a:hover {
+  background-color: rgba(205, 179, 241, 0.1);
+}
+
+.hamb__field.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamb__field.active .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamb__field.active .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+body.noscroll {
+  overflow: hidden;
+}
+}
+  </style>
+  <script>
+      const hamb = document.querySelector("#hamb");
+const popup = document.querySelector("#popup");
+const body = document.body;
+
+// Клонируем меню, чтобы задать свои стили для мобильной версии
+const menu = document.querySelector("#menu").cloneNode(1);
+
+// При клике на иконку hamb вызываем ф-ию hambHandler
+hamb.addEventListener("click", hambHandler);
+
+// Выполняем действия при клике ..
+function hambHandler(e) {
+e.preventDefault();
+// Переключаем стили элементов при клике
+popup.classList.toggle("open");
+hamb.classList.toggle("active");
+body.classList.toggle("noscroll");
+renderPopup();
+}
+
+// Здесь мы рендерим элементы в наш попап
+function renderPopup() {
+popup.appendChild(menu);
+}
+
+// Код для закрытия меню при нажатии на ссылку
+const links = Array.from(menu.children);
+
+// Для каждого элемента меню при клике вызываем ф-ию
+links.forEach((link) => {
+link.addEventListener("click", closeOnClick);
+});
+
+// Закрытие попапа при клике на меню
+function closeOnClick() {
+popup.classList.remove("open");
+hamb.classList.remove("active");
+body.classList.remove("noscroll");
+}
+  </script>
+        <div class="page" style=" width: 110%">
         <main class="content">
             {% block content %}{% endblock %} </main> <br>
 
