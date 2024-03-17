@@ -450,11 +450,11 @@ h1{
     }
    .grid-item {
        width: 65svw;
-       height: 60svh;
+       height: 45svh;
    }
     .textfornews{
         width: 65svw;
-        height: 60svh;
+        height: 45svh;
     }
 
     .texting {
@@ -463,7 +463,7 @@ h1{
 
     .image {
       width: 65svw;
-      height: 60svh;
+      height: 45svh;
     }
 }
 
@@ -485,18 +485,18 @@ h1{
     }
     .grid-item{
         width: 80svw;
-		height: 60svh;
+		height: 50svh;
     }
     .image{
         width: 80svw;
-		height: 60svh;
+		height: 50svh;
     }
     .dropdown{
         margin-bottom: 20px;
     }
     .textfornews{
         width: 80svw;
-		height: 60svh;
+		height: 50svh;
     }
    .corup {
        float: left;
