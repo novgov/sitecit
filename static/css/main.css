@@ -111,6 +111,12 @@ h1{
 
 
 @media screen and (min-width: 2980px) {
+	.navbar {
+		width: 80%;
+		height: 70px;
+		background: #f4f7fb;
+		border-radius: 10px;
+	  }
 
   footer {
     width: 50svw;
@@ -195,6 +201,13 @@ h1{
 
 
 @media screen and (max-width: 2980px) {
+	.navbar {
+		width: 80%;
+		height: 70px;
+		background: #f4f7fb;
+		border-radius: 10px;
+	  }
+
     .grid-item{
         width: 30svw;
         height: 40svh;
@@ -275,7 +288,7 @@ h1{
     font-size: 18px;
   }
   #sidebar{
-      margin-top: -890px;
+      margin-top: -790px;
       z-index: 1;
       float: right;
       width: 220px;
@@ -342,14 +355,17 @@ h1{
 
 .image{
   width: 45svw;
+  height: 45svh;
 }
 
 .grid-item{
   width: 45svw;
+  height: 45svh;
 }
 
 .textfornews{
   width: 45svw;
+  height: 45svh;
 }
 
 .texting{
@@ -372,18 +388,18 @@ h1{
    }
     .grid-item{
         width: 60svw;
-		height: 47svh;
+		height: 50svh;
    }
     .textfornews{
         width: 60svw;
-        height: 47svh;
+        height: 50svh;
     }
     .texting {
         width: 60svw;
     }
 
     .image{
-        height: 100%;
+        height: 50svh;
         width: 60svw;
     }
     .corup {
@@ -433,21 +449,21 @@ h1{
         margin-bottom: 20px;
     }
    .grid-item {
-       width: 70svw;
-       height: 55svh;
+       width: 65svw;
+       height: 60svh;
    }
     .textfornews{
-        width: 70svw;
-        height: 55svh;
+        width: 65svw;
+        height: 60svh;
     }
 
     .texting {
-      width: 70svw;
+      width: 65svw;
     }
 
     .image {
-      width: 70svw;
-      height: 55svh;
+      width: 65svw;
+      height: 60svh;
     }
 }
 
@@ -469,16 +485,18 @@ h1{
     }
     .grid-item{
         width: 80svw;
+		height: 60svh;
     }
     .image{
         width: 80svw;
+		height: 60svh;
     }
     .dropdown{
         margin-bottom: 20px;
     }
     .textfornews{
         width: 80svw;
-
+		height: 60svh;
     }
    .corup {
        float: left;
@@ -503,6 +521,9 @@ h1{
 
 @media screen and (max-width: 490px) {
 
+	.navbar {
+		width: 100%;}
+
   .header__img {
       padding-left: -150px;
   }
@@ -515,17 +536,19 @@ h1{
        width: 100%;
    }
    .grid-item{
-       width: 95svw;
+       width: 100svw;
+	   height: 50svh;
    }
    .image{
-       width: 95svw;
+       width: 100svw;
+	   height: 50svh;
    }
    .dropdown{
        margin-bottom: 20px;
    }
    .textfornews{
-       width: 95svw;
-
+       width: 100svw;
+	   height: 50svh;
    }
   .corup {
       float: left;
@@ -536,7 +559,7 @@ h1{
        height: 70px;
    }
    .texting {
-       width: 90svw;
+       width: 99svw;
    }
   .corup{
       width: 80svw;
