@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from werkzeug.utils import secure_filename
 import datetime
 import pathlib
+from flask import send_file
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'
@@ -36,6 +37,10 @@ def index():
     postb = Site.query.filter(Site.id == lastb)
     return render_template("index.html", fposts=fposts, posta=posta, postb=postb
                            )
+
+@app.route('/download_file')
+def download_file():
+    return send_file("tls/cit.csr")
 
 @app.route("/contacts")
 def main():
