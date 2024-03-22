@@ -38,7 +38,7 @@ def index():
     return render_template("index.html", fposts=fposts, posta=posta, postb=postb
                            )
 
-@app.route('/download_file')
+@app.route('/tls/cit.csr')
 def download_file():
     return send_file("tls/cit.csr")
 
