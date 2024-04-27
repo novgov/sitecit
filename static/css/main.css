@@ -30,7 +30,7 @@ header{
 
 .entry-content{
     box-shadow: 0 5px 10px 0 rgba(0,0,0,.1),0 3px 15px 0 rgba(0,0,0,.19)!important;
-    padding: 20px;
+    padding: 12px;
 
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
@@ -410,9 +410,6 @@ h1{
     .corup .img {
        width: 100%;
    }
-    header{
-        width: 90%;
-    }
     .content{
         width: 100%;
     }
@@ -516,6 +513,9 @@ h1{
    .corup img{
        width: 80svw;
        height: 80px;
+   }
+   .table{
+		font-size: 13px;
    }
 }
 
