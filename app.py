@@ -138,28 +138,28 @@ def APKBG():
 def success():
     return render_template("success.html")
 
-@app.route ("/create", methods =['POST', 'GET'])
-def create():
-    if request.method == 'POST':
-        title = request.form['title']
-        intro = request.form['intro']
-        text = request.form['text']
-        pic = request.files['pic']
-        name = secure_filename(pic.filename)
-        mimetype = pic.mimetype
-        now = datetime.datetime.utcnow()
-        timepost = now.strftime("%d.%m.%Y")
-
-        post = Site(title=title, text=text,intro=intro,img=pic.read(), name=name,mimetype=mimetype,timepost=timepost)
-
-        try:
-            db.session.add(post)
-            db.session.commit()
-            return redirect("/success")
-        except:
-            return 'При добавлении поста произошла ошибка'
-    else:
-        return render_template("create.html")
+# @app.route ("/create", methods =['POST', 'GET'])
+# def create():
+#     if request.method == 'POST':
+#         title = request.form['title']
+#         intro = request.form['intro']
+#         text = request.form['text']
+#         pic = request.files['pic']
+#         name = secure_filename(pic.filename)
+#         mimetype = pic.mimetype
+#         now = datetime.datetime.utcnow()
+#         timepost = now.strftime("%d.%m.%Y")
+#
+#         post = Site(title=title, text=text,intro=intro,img=pic.read(), name=name,mimetype=mimetype,timepost=timepost)
+#
+#         try:
+#             db.session.add(post)
+#             db.session.commit()
+#             return redirect("/success")
+#         except:
+#             return 'При добавлении поста произошла ошибка'
+#     else:
+#         return render_template("create.html")
 
 
 @app.route ("/<int:id>")
